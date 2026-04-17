@@ -123,3 +123,4 @@ def setup(ctx):
     manager = GitManager(ctx)
     ctx.subscribe("git:sync")(manager.handle_sync)
     ctx.subscribe("git:commit_push")(manager.handle_commit_push)
+    
