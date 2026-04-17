@@ -7,7 +7,7 @@ from core.components.plugins.logic.models import ModuleManifest
 manifest = ModuleManifest(
     id="lyndrix.service.git",
     name="Git Service",
-    version="1.1.0",
+    version="0.1.0",
     description="Headless Service zur Verwaltung von Git-Repositories (Remote & Local).",
     type="PLUGIN",
     permissions={"subscribe": ["git:sync", "git:commit_push"], "emit": ["git:status_update"]}
