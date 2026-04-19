@@ -2,14 +2,17 @@ import os
 import asyncio
 import tempfile
 from git import Repo, Actor
-from core.components.plugins.logic.models import ModuleManifest
+from core.api import ModuleManifest
 
 manifest = ModuleManifest(
     id="lyndrix.service.git",
     name="Git Service",
-    version="0.1.2",
+    version="0.1.3",
     description="Headless Service zur Verwaltung von Git-Repositories (Remote & Local).",
     type="PLUGIN",
+    min_core_version="0.1.3",
+    auto_enable_on_install=True,
+    repo_url="https://github.com/marvin1309/lyndrix-git-manager",
     permissions={"subscribe": ["git:sync", "git:commit_push"], "emit": ["git:status_update"]}
 )
 
